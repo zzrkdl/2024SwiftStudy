@@ -51,4 +51,58 @@ let immutableArray = [1, 2, 3]
 
 //MARK: - Dictionary
 
-//キーがStringタイプでValueが
+//キーがStringタイプでValueがAnyの空いてるDictionaryを生成
+var anyDictionary: Dictionary<String, Any> = [String: Any]()
+anyDictionary["someKey"] = "value"
+anyDictionary["anotherKey"] = 100
+
+anyDictionary
+
+anyDictionary["someKey"] = "dictionary"
+
+anyDictionary
+
+anyDictionary.removeValue(forKey: "anotherKey")
+anyDictionary
+
+anyDictionary["someKey"] = nil
+anyDictionary
+
+
+let emptyDictionary: [String: String] = [:]
+let initalizedDictionary: [String: String] = ["name": "kimseongjin", "gender": "male"]
+
+//emptyDictionary["key"] = "value"
+//let someValue: String = initalizedDictionary["name"]
+
+
+
+//MARK: - Set
+
+//空いてるInt Set生成
+var integerSet: Set<Int> = Set<Int>()
+integerSet.insert(1)
+integerSet.insert(10)
+integerSet.insert(100)
+integerSet.insert(199)
+
+integerSet
+integerSet.contains(1)
+integerSet.contains(2)
+
+integerSet.remove(100)
+integerSet.removeFirst()
+
+integerSet.count
+
+
+let setA: Set<Int> = [1,2,3,4,5]
+let setB: Set<Int> = [3,4,5,6,7]
+
+let union: Set<Int> = setA.union(setB)
+
+let sortedUnion: [Int] = union.sorted()
+
+let intersection: Set<Int> = setA.intersection(setB)
+
+let subtractiong: Set<Int> = setA.subtracting(setB)
